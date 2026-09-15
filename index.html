@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>나의 첫 게임</title>
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #fdf6ec;
+    padding-top: 80px;
+  }
+  h1 {
+    color: #333;
+  }
+  #score {
+    font-size: 48px;
+    color: #e07a5f;
+    margin: 20px 0;
+  }
+  button {
+    font-size: 24px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 12px;
+    background: #81b29a;
+    color: white;
+    cursor: pointer;
+  }
+  button:active {
+    background: #6a9985;
+  }
+</style>
+</head>
+<body>
+
+  <h1>나의 첫 게임 🎮</h1>
+  <div id="score">0</div>
+  <button id="clickButton">눌러!</button>
+
+  <script>
+    let score = 0;
+    const scoreDisplay = document.getElementById("score");
+    const button = document.getElementById("clickButton");
+
+    button.addEventListener("click", function() {
+      score = score + 1;
+      scoreDisplay.textContent = score;
+    });
+  </script>
+
+</body>
+</html>
